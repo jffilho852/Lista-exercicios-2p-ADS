@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7questao.html</title>
+</head>
+<body>
+    <!--  Escreva um programa para calcular a redução do tempo de vida de um
+fumante. Pergunte a quantidade de cigarros fumados por dias e quantos anos ele já
+fumou. Considere que um fumante perde 10 min de vida a cada cigarro. Calcule quantos
+dias de vida um fumante perderá e exiba o total em dias. -->
+
+<script>
+    alert("programa para calcular a reduçao do tempo de vida de um fumante!!!")
+
+    const qtdCigarro = +prompt("Quantos Cigarros vc fuma por dia ?")
+    const qtdAno = +prompt("há quantos anos voce fuma ?")
+
+    const diasPerdidos = (10 * qtdCigarro)/1440
+
+    const resultado = (365 * qtdAno) * diasPerdidos
+
+    document.write(`a quantidade de dias perdidos fumando ${qtdCigarro} por dia durante ${qtdAno} anos é ${ Math.round(resultado)}`)
+
+
+</script>
+    
+</body>
+</html>

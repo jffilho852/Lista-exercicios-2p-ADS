@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17questao</title>
+</head>
+<body>
+    <!-- 200) Faça um algoritmo que pergunte ao usuário um número inteiro e positivo
+qualquer e mostre uma contagem até esse valor:
+Ex: Digite um valor: 35
+Contagem: 1 2 3 4 5 6 7 ... 33 34 35 Acabou! -->
+    <script>
+        const numero = parseInt(+prompt("digite um numero inteiro  positivo "))
+
+        if(numero < 0 ){
+            document.write("numero invalido, digite um numero positivo e inteiro ")
+
+        }else {
+            for(let i = 0; i <= numero; i++){
+                document.write(i + "-")
+            }
+        }
+        document.write("ACABOU")
+
+    </script>
+</body>
+</html>

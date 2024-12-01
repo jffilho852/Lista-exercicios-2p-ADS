@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11questao.html</title>
+</head>
+
+<body>
+    <!-- Numa promoção exclusiva para o Dia da Mulher, uma loja quer dar descontos
+para todos, mas especialmente para mulheres. Faça um programa que leia nome, sexo e
+o valor das compras do cliente e calcule o preço com desconto. Sabendo que: -
+• Homens ganham 5% de desconto
+• Mulheres ganham 13% de desconto -->
+
+    <label for="nome">nome:</label>
+    <input type="text" name="Nome" id="nome" placeholder="Digite seu nome Completo ">
+    <br>
+
+    <label for="genero-homem">Homem</label>
+    <input type="radio" name="genero" id="genero-homem" value="homem">
+    <label for="genero-mulher">Mulher</label>
+    <input type="radio" name="genero" id="genero-mulher" value="mulher">
+    <br>
+    <br>
+    <label for="valorCompras">Valor das compras</label>
+    <input type="number" id="valorCompras" min="0" max="1000000000" placeholder="Digite o valor das suas compras">
+    <button id="btn-calcular">Calcular Desconto </button>
+
+    <p id="resultado"></p>
+
+    <script>
+        let resultado = document.getElementById("resultado")
+        const btnCalcular = document.getElementById("btn-calcular")
+
+        function calcularDesconto() {
+            const nome = document.getElementById("nome").value
+            let genero = document.querySelector('input[name = "genero"]:checked').value
+            let desconto;
+
+            const valorCompras = parseFloat(document.getElementById("valorCompras").value)
+
+            if (genero === "homem" && parseFloat(valorCompras)) {
+                desconto = (0.05 * valorCompras)
+
+            } else if (genero === "mulher" && parseFloat(valorCompras)) {
+                desconto = (0.13 * valorCompras)
+            }
+            let totalDesconto = valorCompras - desconto
+            resultado.innerHTML = `Olá ${nome}, o valor de sua compra tem um desconto especial de ${desconto} totalizando : ${totalDesconto}`
+        }
+        btnCalcular.addEventListener("click", calcularDesconto)
+    </script>
+
+
+
+
+
+</body>
+
+</html>

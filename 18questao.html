@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18questao</title>
+</head>
+
+<body>
+    <!-- 201) Desenvolva um algoritmo que mostre uma contagem regressiva de 30 até 1,
+marcando os números que forem divisíveis por 4, exatamente como mostrado: 30 29 [28]
+27 26 25 [24] 23 22 21 [20] 19 18 17 [16]... -->
+
+<script>
+
+    for(let i = 30; i >= 1; i --){
+        if(i % 4 != 0 ){
+            document.write(i + " ")
+        }else if(i % 4 === 0 ){
+            document.write(`[${i}] `)
+        }
+
+    }
+    document.write("acabou")
+</script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19questao</title>
+</head>
+
+<body>
+    <!-- Faça um programa que leia a idade e o sexo de 5 pessoas, mostrando no final:
+a) Quantos homens foram cadastrados
+
+b) Quantas mulheres foram cadastradas
+c) A média de idade do grupo
+d) A média de idade dos homens
+e) Quantas mulheres tem mais de 20 anos -->
+
+    <script>
+
+        let qtdHomens = 0;
+        let qtdMulheres = 0;
+        let somaIdade = 0;
+        let somaIdadeHomens = 0;
+        let mulheres20 = 0;
+
+        for (let i = 1; i <= 5; i++) {
+            let idade = parseInt(+prompt(`digite a idade da pessoa ${i}`))
+            let genero = prompt(`Informe o genero da pessoa ${i}: Digite: M para masculino ou F para femenino`)
+
+            somaIdade += idade;
+
+            if (genero === "M") {
+                qtdHomens++;
+                somaIdadeHomens += idade
+            } else if (genero === "F") {
+                qtdMulheres++
+                if (idade > 20) {
+                    mulheres20++
+                }
+
+            }
+        }
+
+
+
+        let mediaGrupo = somaIdade / 5;
+        let mediaIdadeHomens = somaIdadeHomens / qtdHomens;
+
+        document.writeln(`a quantidade de homens cadastrados é; ${qtdHomens}`)
+
+        document.writeln(`a quantidade de mulheres cadastradas é : ${qtdMulheres}`)
+        document.writeln(`a média de idade do grupo é : ${mediaGrupo}`)
+        document.writeln(`a media de idade dos homens é ${mediaIdadeHomens}`)
+        document.writeln(`a quantidade de mulheres com mais de 20 anos é : ${mulheres20}`)
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10questao</title>
+</head>
+
+<body>
+    <h1>Peso ideal</h1>
+    <p>Tendo como dados de entrada a altura e o sexo de uma pessoa, construa um
+        algoritmo que calcule seu peso ideal, utilizando as seguintes fórmulas:
+        a. para homens: (72.7 * h) – 58;
+        b. para mulheres: (62.1 * h) – 44.7.</p>
+
+    <br>
+    <br>
+    <form>
+
+        <label for="genero-homem">homem</label>
+        <input type="radio" id="genero-homem" name="genero" value="homem">
+        <label for="genero-mulher">mulher</label>
+        <input type="radio" id="genero-mulher" name="genero" value="mulher">
+        <br>
+        <br>
+
+        <label for="altura">Informe aqui sua altura : </label>
+        <input type="number" id="altura" min="1" max="200">
+
+        <button type="button" id="btn-calcular"> Calcular</button>
+        <hr>
+    </form>
+    <p id="resultado"></p>
+
+
+    <script>
+
+        const btnCalcular = document.getElementById("btn-calcular")
+        let resultado = document.getElementById("resultado")
+        let pesoIdeal
+
+        function escrever() {
+            let genero = document.querySelector('input[name = "genero"]:checked').value
+            const altura = parseFloat(document.querySelector("#altura").value)
+
+            if (genero === "homem" && parseFloat(altura)) {
+                pesoIdeal = (72.7 * altura) - 58;
+            } else if (genero === "mulher" && parseFloat(altura)) {
+                pesoIdeal = (62.1 * altura) - 44.7
+            }
+
+            resultado.innerHTML = `O seu peso ideal é : ${pesoIdeal}`
+            console.log(resultado)
+
+        }
+
+
+        btnCalcular.addEventListener('click', escrever)
+    </script>
+</body>
+
+</html>

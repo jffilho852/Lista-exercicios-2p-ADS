@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14questao</title>
+</head>
+<body>
+    <!-- Crie um programa que leia duas notas de um aluno e calcule a sua média,
+mostrando uma mensagem no final, de acordo com a média atingida:
+• Média até 4.9: REPROVADO
+• Média entre 5.0 e 6.9: RECUPERAÇÃO
+• Média 7.0 ou superior: APROVADO -->
+
+<script>
+    const nota1 = parseFloat(+prompt("digite a primeira nota "))
+    const nota2 = parseFloat(+prompt("digite a segunda nota "))
+
+    const media =  (nota1 + nota2)/2 
+ console.log(media)
+    if(media <= 4.9){
+        document.write("REPROVADO ")
+
+    }else if(media >= 5.0 && media <= 6.9 ){
+        document.write("RECUPERAÇAO")
+    }else if(media >= 7.0 ){
+        document.write("APROVADO")
+    }
+
+    
+</script>
+</body>
+</html>

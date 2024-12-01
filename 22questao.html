@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22questao</title>
+</head>
+<body>
+    <!-- Crie um algoritmo que leia a idade de 10 pessoas, mostrando no final:
+a) Qual é a média de idade do grupo
+b) Quantas pessoas tem mais de 18 anos
+c) Quantas pessoas tem menos de 5 anos
+d) Qual foi a maior idade lida -->
+
+<script>
+     let somaIdade = 0 ;
+     let maiorIdade = 0;
+     let menorCinco = 0;
+     let idadeMaior = 0;
+
+    for(i = 1; i<=10; i++ ){
+        let idade = +prompt(`Informe a idade da ${i} pessoa: `)
+
+        somaIdade +=idade 
+
+        if(idade > 18){
+            maiorIdade++
+        } else if(idade < 5 ){
+            menorCinco++
+        }
+
+        if(idade > idadeMaior){
+            idadeMaior = idade
+        }
+
+
+
+    }
+    let media = somaIdade/10
+
+    document.write(`a media de idade do grupo é : ${media}`)
+    document.write(` no grupo tem :${maiorIdade} maiores de 18 anos `)
+    document.write(`No grupo há : ${menorCinco} menores de 5 anos `)
+    document.write(`a maior idade lida é : ${idadeMaior}`)
+</script>
+
+</body>
+</html>

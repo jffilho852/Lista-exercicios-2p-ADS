@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15questao</title>
+</head>
+
+<body>
+    <!-- Em uma universidade, a aprovação em um disciplina requer no mínimo 75% de
+presença e no mínimo média 6.0. Se o aluno estourar em faltas, ele é reprovado
+diretamente; caso contrário, se ele não alcançar a média mínima, ele fica para
+recuperação. Dada a média de um aluno, bem como o número de aulas da disciplina e o
+número de faltas do aluno, informe a sua situação. -->
+
+    <script>
+        const media = parseFloat(+prompt("Informe a média do aluno"))
+        const qtdAulas = parseInt(+prompt("Informe o número de aulas da disciplina"))
+        const qtdFaltas = parseInt(+prompt("Informe o numero de faltas do aluno:"))
+
+        const perFalta = (qtdFaltas *100)/ qtdAulas 
+
+        if (Math.floor(perFalta) > 75){
+            console.log( MATH.floor( perFalta))
+            document.write("Aluno Reprovado por falta ")
+
+        }else if(media < 6){
+            document.write("O aluno está na recuperaçao ")
+
+        }else {
+            document.write("O aluno foi aprovado")
+        }
+    </script>
+</body>
+
+</html>
